@@ -22,7 +22,6 @@
     self.preferredContentSize = CGSizeMake(0, 210);
     self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.hbc.co.jp/weather/roadcamera/current/picture/970000000230.jpg"]]];
-    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.hbc.co.jp/info-cam/sapporo.html"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +35,7 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
 
+    // 通知センターを開くたびにビューを再描画する
     completionHandler(NCUpdateResultNewData);
 }
 
