@@ -42,12 +42,17 @@
 }
 
 - (IBAction)callPhone:(id)sender {
-    // FIXME: 実験用の一時的な実装．openURLでカスタムスキームを投げる
+    // テキストフィールドにペーストされた電話番号とともに，tel:// URLスキームをつかって電話アプリを起動する．
+    // 入力チェックとかめんどいのでしない．
     NSString *phoneNum = self.textField.text;
     NSURL *url = [NSURL URLWithString:[@"tel://" stringByAppendingString:phoneNum]];
     [self.extensionContext openURL:url completionHandler:^(BOOL success) {
-        // successがYESなら成功
-        if (success) NSLog(@"SUCCESS!");
+        // successがYESなら成功．意味なくログを吐く．
+        if (success) {
+            NSLog(@"SUCCESS!");
+        } else {
+            NSLog(@"FAIL!");
+        }
     }];
 }
 @end
