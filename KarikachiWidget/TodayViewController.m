@@ -10,7 +10,9 @@
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding>
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+- (IBAction)callPhone:(id)sender;
 
 @end
 
@@ -19,9 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.preferredContentSize = CGSizeMake(0, 210);
-    self.webView.scalesPageToFit = YES;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.hbc.co.jp/weather/roadcamera/current/picture/970000000230.jpg"]]];
+    self.preferredContentSize = CGSizeMake(0, 100);
+    //self.webView.scalesPageToFit = YES;
+    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.hbc.co.jp/weather/roadcamera/current/picture/970000000230.jpg"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,4 +41,13 @@
     completionHandler(NCUpdateResultNewData);
 }
 
+- (IBAction)callPhone:(id)sender {
+    // FIXME: 実験用の一時的な実装．openURLでカスタムスキームを投げる
+    NSString *phoneNum = self.textField.text;
+    NSURL *url = [NSURL URLWithString:[@"tel://" stringByAppendingString:phoneNum]];
+    [self.extensionContext openURL:url completionHandler:^(BOOL success) {
+        // successがYESなら成功
+        if (success) NSLog(@"SUCCESS!");
+    }];
+}
 @end
