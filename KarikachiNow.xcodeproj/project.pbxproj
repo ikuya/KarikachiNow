@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15E0CE4B19F61A5A00F34D56 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15E0CE4A19F61A5A00F34D56 /* Media.xcassets */; };
 		15EE825519F0B6A700361356 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE825419F0B6A700361356 /* main.m */; };
 		15EE825819F0B6A700361356 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE825719F0B6A700361356 /* AppDelegate.m */; };
 		15EE825B19F0B6A700361356 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE825A19F0B6A700361356 /* ViewController.m */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15E0CE4A19F61A5A00F34D56 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		15EE824F19F0B6A700361356 /* KarikachiNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarikachiNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EE825319F0B6A700361356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15EE825419F0B6A700361356 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		15EE824619F0B6A700361356 = {
 			isa = PBXGroup;
 			children = (
+				15E0CE4A19F61A5A00F34D56 /* Media.xcassets */,
 				15EE825119F0B6A700361356 /* KarikachiNow */,
 				15EE826B19F0B6A700361356 /* KarikachiNowTests */,
 				15EE828019F0B6C200361356 /* KarikachiWidget */,
@@ -271,6 +274,7 @@
 					};
 					15EE827B19F0B6C200361356 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = K7MJSS87ST;
 					};
 				};
 			};
@@ -301,6 +305,7 @@
 			files = (
 				15EE825E19F0B6A700361356 /* Main.storyboard in Resources */,
 				15EE826319F0B6A700361356 /* LaunchScreen.xib in Resources */,
+				15E0CE4B19F61A5A00F34D56 /* Media.xcassets in Resources */,
 				15EE826019F0B6A700361356 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +527,10 @@
 		15EE828E19F0B6C200361356 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -529,6 +538,7 @@
 				INFOPLIST_FILE = KarikachiWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -536,9 +546,14 @@
 		15EE828F19F0B6C200361356 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KarikachiWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -562,6 +577,7 @@
 				15EE827419F0B6A700361356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15EE827519F0B6A700361356 /* Build configuration list for PBXNativeTarget "KarikachiNowTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +586,7 @@
 				15EE827719F0B6A700361356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15EE828D19F0B6C200361356 /* Build configuration list for PBXNativeTarget "KarikachiWidget" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +595,7 @@
 				15EE828F19F0B6C200361356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
